@@ -7,9 +7,9 @@ from sqlalchemy import (Column,
                         )
 from flask_sqlalchemy import SQLAlchemy
 
-database_name = "casting_agency"
+# database_name = "casting_agency"
 database_path = os.environ['DATABASE_URL']
-# database_path = "postgres://uxrbcsfivlrkup:28ec020c292dcdf591f1f2cf9aa43b740703d54658cb6ab10151f418805d19f2@ec2-184-73-249-9.compute-1.amazonaws.com:5432/depma9uda2oaj8"
+# database_path = "postgresql://{}:{}@{}/{}".format('neil', 'bad112boy', 'localhost:5432', database_name)
 db = SQLAlchemy()
 
 '''
@@ -24,7 +24,7 @@ def setup_db(app, database_path=database_path):
     app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
     db.app = app
     db.init_app(app)
-    db.create_all()
+#    db.create_all()
 
 
 # def db_drop_and_create_all():
