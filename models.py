@@ -1,4 +1,5 @@
 """Models for final project."""
+import os
 from sqlalchemy import (Column,
                         String,
                         Integer,
@@ -7,7 +8,8 @@ from sqlalchemy import (Column,
 from flask_sqlalchemy import SQLAlchemy
 
 database_name = "casting_agency"
-database_path = "postgresql://{}:{}@{}/{}".format('neil', 'bad112boy', 'localhost:5432', database_name)
+database_path = os.environ['DATABASE_URL']
+# database_path = "postgres://uxrbcsfivlrkup:28ec020c292dcdf591f1f2cf9aa43b740703d54658cb6ab10151f418805d19f2@ec2-184-73-249-9.compute-1.amazonaws.com:5432/depma9uda2oaj8"
 db = SQLAlchemy()
 
 '''
