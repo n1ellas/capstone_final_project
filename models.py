@@ -7,9 +7,9 @@ from sqlalchemy import (Column,
                         )
 from flask_sqlalchemy import SQLAlchemy
 
-# database_name = "casting_agency"
-database_path = os.environ['DATABASE_URL']
-# database_path = "postgresql://{}:{}@{}/{}".format('neil', 'bad112boy', 'localhost:5432', database_name)
+database_name = "casting_agency"
+# database_path = os.environ['DATABASE_URL']
+database_path = "postgresql://{}:{}@{}/{}".format('neil', 'bad112boy', 'localhost:5432', database_name)
 db = SQLAlchemy()
 
 '''
