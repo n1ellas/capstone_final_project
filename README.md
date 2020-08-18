@@ -119,7 +119,6 @@ Additionally, common pitfalls & error messages are explained, if applicable.
 Base URL
 
 https://vast-inlet-80598.herokuapp.com/
-Authentification
 
 
 How to work with each endpoint using Postman
