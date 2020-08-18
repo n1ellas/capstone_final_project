@@ -43,7 +43,8 @@ def create_app(test_config=None):
         return "Welcome to the Casting Agency!"
 
     @app.route('/actors', methods=['GET'])
-    def get_actors():
+    @requires_auth('get:actors')
+    def get_actors(token):
         """Return a list of actors."""
         actors = Actor.query.order_by(Actor.id).all()
         current_actors = pagination(request, actors)
@@ -141,7 +142,8 @@ def create_app(test_config=None):
         })
 
     @app.route('/movies', methods=['GET'])
-    def get_movies():
+    @requires_auth('get:movies')
+    def get_movies(token):
         """Get movies route."""
         selection = Movie.query.order_by(Movie.id).all()
         paginated_movies = pagination(request, selection)
