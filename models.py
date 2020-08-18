@@ -7,6 +7,11 @@ from sqlalchemy import (Column,
                         )
 from flask_sqlalchemy import SQLAlchemy
 
+
+'''
+    Uncomment the database name casting_agency and path "postgresql" and
+    comment out the DATABASE_URL and create a postgres database on your machine
+'''
 # database_name = "casting_agency"
 database_path = os.environ['DATABASE_URL']
 # database_path = "postgresql://{}:{}@{}/{}".format('neil', 'bad112boy', 'localhost:5432', database_name)
