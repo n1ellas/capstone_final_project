@@ -38,6 +38,10 @@ def create_app(test_config=None):
         except:
             return default_text
 
+    @app.route('/')
+    def landing_page():
+        return "Welcome to the Casting Agency!"
+
     @app.route('/actors', methods=['GET'])
     @requires_auth('get:actors')
     def get_actors(token):
